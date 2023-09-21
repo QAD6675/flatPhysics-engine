@@ -35,9 +35,9 @@ namespace FlatPhysics
             get { return this.bodyList.Count; }
         }
 
-        public FlatWorld()
+        public FlatWorld(float g)
         {
-            this.gravity = new FlatVector(0f, -9.81f);
+            this.gravity = new FlatVector(0f, -g);
             this.bodyList = new List<FlatBody>();
             this.contactPairs = new List<(int, int)>();
 
